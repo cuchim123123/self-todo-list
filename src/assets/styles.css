@@ -1,0 +1,17 @@
+:root {
+    --sky-blue: #0088d2;
+    --grey: #e4e4eb;
+    --white: #f5f0f0;
+}
+
+* {
+    padding: 0px;
+    margin: 0;
+    font-family: 'Inter', 'Roboto', 'Segoe UI', sans-serif;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
