@@ -26,7 +26,7 @@
           <div class="add-project">
             <span>Add new project</span>
             <svg
-              class="add-btn"
+              class="plus-svg"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -37,6 +37,15 @@
             </svg>
           </div>
           <div class="projects">
+            <div class="project">Lorem ipsum dolor sit amet.</div>
+            <div class="project">Lorem, ipsum dolor.</div>
+            <div class="project">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+            <div class="project">Lorem ipsum dolor sit amet.</div>
+            <div class="project">Lorem, ipsum dolor.</div>
+            <div class="project">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+            <div class="project">Lorem ipsum dolor sit amet.</div>
+            <div class="project">Lorem, ipsum dolor.</div>
+            <div class="project">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
             <div class="project">Lorem ipsum dolor sit amet.</div>
             <div class="project">Lorem, ipsum dolor.</div>
             <div class="project">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
@@ -54,9 +63,13 @@
             adipisicing elit. Iure vitae blanditiis officia, ab voluptatibus
             neque ratione. Consequatur reprehenderit unde vero!
           </div>
-          <div class="deadline last-line">Datetime</div>
-          <div class="total-tasks last-line">total tasks: 67</div>
-          <div class="remaining last-line">remaining: 66</div>
+          <div class="last-line">
+            <div class="deadline">Due: <span id="deadline"></span></div>
+            <div class="right">
+              <div>total tasks: <span class="total-tasks"></span></div>
+              <div>remaining: <span class="remaining"></span></div>
+            </div>
+          </div>
         </div>
 
         <div class="task-list">
@@ -72,8 +85,155 @@
 
                 <div class="priority">!!</div>
 
-                <img src="#" alt="" class="delete-btn" />
+                <svg class="delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete</title><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
               </label>
+
+              <label for="checkbox">
+                <div class="task">
+                  <div>This is what u gon do</div>
+                  <div class="deadline">This is the deadline</div>
+                </div>
+
+                <div class="priority">!!</div>
+
+                <svg class="delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete</title><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
+                
+              </label>
+
+              <label for="checkbox">
+                <div class="task">
+                  <div>This is what u gon do</div>
+                  <div class="deadline">This is the deadline</div>
+                </div>
+
+                <div class="priority">!!</div>
+
+                <svg class="delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete</title><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
+              </label>
+              
+            </div>
+          </div>
+
+          <div class="tasks-group">
+            <h3>Task-group 1</h3>
+
+            <div class="task-box">
+              <label for="checkbox">
+                <div class="task">
+                  <div>This is what u gon do</div>
+                  <div class="deadline">This is the deadline</div>
+                </div>
+
+                <div class="priority">!!</div>
+
+                <svg class="delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete</title><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
+              </label>
+
+              <label for="checkbox">
+                <div class="task">
+                  <div>This is what u gon do</div>
+                  <div class="deadline">This is the deadline</div>
+                </div>
+
+                <div class="priority">!!</div>
+
+                <svg class="delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete</title><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
+                
+              </label>
+
+              <label for="checkbox">
+                <div class="task">
+                  <div>This is what u gon do</div>
+                  <div class="deadline">This is the deadline</div>
+                </div>
+
+                <div class="priority">!!</div>
+
+                <svg class="delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete</title><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
+              </label>
+              
+            </div>
+          </div>
+
+          <div class="tasks-group">
+            <h3>Task-group 1</h3>
+
+            <div class="task-box">
+              <label for="checkbox">
+                <div class="task">
+                  <div>This is what u gon do</div>
+                  <div class="deadline">This is the deadline</div>
+                </div>
+
+                <div class="priority">!!</div>
+
+                <svg class="delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete</title><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
+              </label>
+
+              <label for="checkbox">
+                <div class="task">
+                  <div>This is what u gon do</div>
+                  <div class="deadline">This is the deadline</div>
+                </div>
+
+                <div class="priority">!!</div>
+
+                <svg class="delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete</title><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
+                
+              </label>
+
+              <label for="checkbox">
+                <div class="task">
+                  <div>This is what u gon do</div>
+                  <div class="deadline">This is the deadline</div>
+                </div>
+
+                <div class="priority">!!</div>
+
+                <svg class="delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete</title><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
+              </label>
+              
+            </div>
+          </div>
+
+          <div class="tasks-group">
+            <h3>Task-group 1</h3>
+
+            <div class="task-box">
+              <label for="checkbox">
+                <div class="task">
+                  <div>This is what u gon do</div>
+                  <div class="deadline">This is the deadline</div>
+                </div>
+
+                <div class="priority">!!</div>
+
+                <svg class="delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete</title><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
+              </label>
+
+              <label for="checkbox">
+                <div class="task">
+                  <div>This is what u gon do</div>
+                  <div class="deadline">This is the deadline</div>
+                </div>
+
+                <div class="priority">!!</div>
+
+                <svg class="delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete</title><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
+                
+              </label>
+
+              <label for="checkbox">
+                <div class="task">
+                  <div>This is what u gon do</div>
+                  <div class="deadline">This is the deadline</div>
+                </div>
+
+                <div class="priority">!!</div>
+
+                <svg class="delete" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete</title><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
+              </label>
+              
             </div>
           </div>
         </div>
