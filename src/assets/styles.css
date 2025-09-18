@@ -33,10 +33,12 @@ img {
   color: var(--white);
   font-weight: 700;
   min-height: 100vh;
+  box-shadow: 6px 0 8px -4px rgba(0,0,0,0.25);
 }
 
 .sidebar svg {
   fill: white;
+
 }
 
 .title {
@@ -54,22 +56,66 @@ img {
   min-width: 70px;
 }
 
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
+}
 
+.add-project {
+  align-self: center;
+  margin-top: 5vh;
+  padding: 1.5rem 2rem;
+  border: var(--white) 1px solid;
+  border-radius: 9999px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+  white-space: nowrap;
+
+  font-size: 1.5rem;
+}
+
+.add-btn {
+  width: 2rem;
+
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+
+}
+
+.project {
+  border: 1px solid var(--white);
+  
+  margin-left: -2vw;
+  margin-right: -2vw;
+
+}
 
 /* Main */
+
+/* Projects infos*/
+
 .main {
   display: grid;
   grid-template-rows: 1fr 3fr;
 }
 
-/* Project Infos*/
+
 
 .project-infos {
   box-shadow: 0 6px 8px -4px rgba(0,0,0,0.25);
+  z-index: 1;
 }
 
 
-/* main project */
 
 .task-list {
   background-color: var(--grey);
