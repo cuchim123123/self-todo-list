@@ -20,6 +20,8 @@ img {
   grid-template-columns: 1fr 2fr;
 }
 
+/* SIDE BAR */
+
 .sidebar {
   padding: 1.5vh 2vw;
 
@@ -52,3 +54,23 @@ img {
   min-width: 70px;
 }
 
+
+
+/* Main */
+.main {
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+}
+
+/* Project Infos*/
+
+.project-infos {
+  box-shadow: 0 6px 8px -4px rgba(0,0,0,0.25);
+}
+
+
+/* main project */
+
+.task-list {
+  background-color: var(--grey);
+}
