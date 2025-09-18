@@ -1,17 +1,54 @@
 :root {
-    --sky-blue: #0088d2;
-    --grey: #e4e4eb;
-    --white: #f5f0f0;
+  --sky-blue: #0088d2;
+  --grey: #e4e4eb;
+  --white: #f5f0f0;
 }
 
 * {
-    padding: 0px;
-    margin: 0;
-    font-family: 'Inter', 'Roboto', 'Segoe UI', sans-serif;
-    box-sizing: border-box;
+  padding: 0px;
+  margin: 0;
+  font-family: "Inter", "Roboto", "Segoe UI", sans-serif;
+  box-sizing: border-box;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.sidebar {
+  padding: 1.5vh 2vw;
+
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--sky-blue);
+  color: var(--white);
+  font-weight: 700;
+  min-height: 100vh;
+}
+
+.sidebar svg {
+  fill: white;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  justify-content: center;
+
+  font-size: clamp(2rem, 3vw + 1rem, 4rem);
+}
+
+.title-logo {
+  width: 25%;
+  max-width: 600px;
+  min-width: 70px;
 }
 

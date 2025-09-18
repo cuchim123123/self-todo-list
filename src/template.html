@@ -1,55 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Self Todo App</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <nav class="sidebar">
-            <div class="title">
-                <svg class="title-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>list-status</title><path d="M16.5 11L13 7.5L14.4 6.1L16.5 8.2L20.7 4L22.1 5.4L16.5 11M11 7H2V9H11V7M21 13.4L19.6 12L17 14.6L14.4 12L13 13.4L15.6 16L13 18.6L14.4 20L17 17.4L19.6 20L21 18.6L18.4 16L21 13.4M11 15H2V17H11V15Z" /></svg>
-                <span>TODO</span>
-            </div>
-
-            <div class="projects">
-                <div class="project"></div>
-                <div class="project"></div>
-                <div class="project"></div>
-            </div>
-
-            <svg class="add-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>plus-circle-outline</title><path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z" /></svg>
-        </nav>
-
-        <div class="main">
-            <div class="project-infos">
-                <div class="project-name"></div>
-                <div class="project-desc"></div>
-                <div class="deadline last-line"></div>
-                <div class="total-tasks last-line"></div>
-                <div class="remaining last-line"></div>
-            </div>
-
-            <div class="task-list">
-                <div class="tasks-group">
-                    <h3>Task-group 1</h3>
-
-                    <div class="task-box">
-                        <label for="checkbox">
-                            <div class="task">
-                                <div>This is what u gon do</div>
-                                <div class="deadline">This is the deadline</div>
-                            </div>
-
-                            <div class="priority">!!</div>
-                            
-                            <img src="#" alt="" class="delete-btn">
-                        </label>
-                    </div>
-                </div>
-            </div>
+      <nav class="sidebar">
+        <div class="title">
+          <svg
+            class="title-logo"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <title>list-status</title>
+            <path
+              d="M16.5 11L13 7.5L14.4 6.1L16.5 8.2L20.7 4L22.1 5.4L16.5 11M11 7H2V9H11V7M21 13.4L19.6 12L17 14.6L14.4 12L13 13.4L15.6 16L13 18.6L14.4 20L17 17.4L19.6 20L21 18.6L18.4 16L21 13.4M11 15H2V17H11V15Z"
+            />
+          </svg>
+          <span>TODO</span>
         </div>
+
+        <div class="projects">
+          <div class="project"></div>
+          <div class="project"></div>
+          <div class="project"></div>
+        </div>
+
+        <svg
+          class="add-btn"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <title>plus-circle-outline</title>
+          <path
+            d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z"
+          />
+        </svg>
+      </nav>
+
+      <div class="main">
+        <div class="project-infos">
+          <div class="project-name">Project name</div>
+          <div class="project-desc">
+            Long ahh desc like Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Iure vitae blanditiis officia, ab voluptatibus
+            neque ratione. Consequatur reprehenderit unde vero!
+          </div>
+          <div class="deadline last-line">Datetime</div>
+          <div class="total-tasks last-line">total tasks: 67</div>
+          <div class="remaining last-line">remaining: 66</div>
+        </div>
+
+        <div class="task-list">
+          <div class="tasks-group">
+            <h3>Task-group 1</h3>
+
+            <div class="task-box">
+              <label for="checkbox">
+                <div class="task">
+                  <div>This is what u gon do</div>
+                  <div class="deadline">This is the deadline</div>
+                </div>
+
+                <div class="priority">!!</div>
+
+                <img src="#" alt="" class="delete-btn" />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
