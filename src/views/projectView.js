@@ -1,13 +1,12 @@
 import Project from "../models/Project";
 import storage from "../storage";
 
-export const DOMElements = {
-    addProjectBtn: document.querySelector(".add-project"),
-    deleteProjectBtn: document.querySelector(".project-delete-btn"),
-    projectsHolder: document.querySelector(".projects"),
-    projectForm: document.querySelector(".add-project-form"),
-    projects: storage.loadProjects(),
-}
+const addProjectBtn = document.querySelector(".add-project");
+const deleteProjectBtn = document.querySelector(".project-delete-btn");
+const projectsHolder = document.querySelector(".projects");
+const projectForm = document.querySelector(".add-project-form")
+
+const projects = storage.loadProjects();
 
 export function renderProjects(){
     projectsHolder.innerHTML = ``;
