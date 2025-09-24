@@ -1,11 +1,3 @@
-import { renderProject } from "../views/projectView"; 
-
-const addProjectBtn = document.querySelector(".add-project");
+import { renderProject, showProjectForm } from "../views/projectView"; 
 
 
-
-
-
-addProjectBtn.addEventListener("click", ()=>{
-    document.querySelector("body").style.display = "none";
-})

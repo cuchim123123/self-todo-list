@@ -1,4 +1,9 @@
 import "./assets/styles.css";
-import Project from "./models/Project.js";
-import Task from "./models/Task.js";
-import {}
+import { renderProjects } from "./views/projectView.js";
+import storage from "./storage.js";
+import { addProject } from "./services/projectServices.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+    renderProjects(storage.loadProjects());
+    attachEvents();
+});
