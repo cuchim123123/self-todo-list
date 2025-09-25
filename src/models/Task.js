@@ -1,5 +1,5 @@
 export default class Task {
-    constructor(title, due, priority){
+    constructor(title, due, priority = 0){
         this.id = crypto.randomUUID();
         this.isCompleted = false;
 

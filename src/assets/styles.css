@@ -121,13 +121,15 @@ img {
     border-radius: 10px;
   }
 
-  .add-project-form button:first-child {
+  .add-project-form button:first-of-type {
     grid-column: 1;
+    background-color: rgb(124, 231, 195);
 
   }
 
-  .add-project-form button:last-child {
+  .add-project-form button:last-of-type {
     grid-column: 2;
+    background-color: crimson;
   }
 
 

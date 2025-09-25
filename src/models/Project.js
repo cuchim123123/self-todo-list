@@ -1,3 +1,6 @@
+import Task from "./Task";
+
+
 export default class Project {
     constructor(title, desc, due){
         this.id = crypto.randomUUID();
@@ -5,15 +8,23 @@ export default class Project {
         this.due = due;
         this.desc = desc;
         this.isCompleted = false;
-        this.tasks = [];
+        this.taskGroups = [];
     }
 
-    addTask(task){
-        this.tasks.push(task);
+    addTaskGroup(title){
+        const taskGroup = {
+            id: crypto.randomUUID(),
+            tasks: [],
+            title,
+
+        }
+
+        this.taskGroups.push(taskGroup);
     }
 
-    removeTask(taskId){
-        this.tasks = this.tasks.filter(task => task.id !== taskId);
+    addTask(taskGroupId, taskTitle, due, priority = 0){
+        const targetGroup = this.taskGroups.find(group => group.id === taskGroupId);
+        targetGroup.tasks.push(new Task(taskTitle, due, priority));
     }
 
     setTitle(newTitle){
