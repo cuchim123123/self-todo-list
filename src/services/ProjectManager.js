@@ -1,5 +1,5 @@
 import Project from "../models/Project.js";
-import storage from "../storage.js";
+import storage from "../LocalStorage.js";
 
 
 export default class ProjectManager {
@@ -13,7 +13,7 @@ export default class ProjectManager {
 
     addProject(title, desc, due){
         const newProject = new Project(title, desc, due);
-        this.projects.push(newProject);
+        this.projects.push(newProject); 
     }
 }
 

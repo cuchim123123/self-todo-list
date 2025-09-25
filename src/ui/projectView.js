@@ -1,5 +1,5 @@
 import Project from "../models/Project";
-import storage from "../storage";
+import storage from "../LocalStorage";
 
 const addProjectBtn = document.querySelector(".add-project");
 const deleteProjectBtn = document.querySelector(".project-delete-btn");
