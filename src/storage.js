@@ -3,7 +3,18 @@ import Project from "./models/Project";
 
 export default class Storage {
     static loadProjects(){
-        return JSON.parse(localStorage.getItem("projects")) || [];
+        const projectObjects = JSON.parse(localStorage.getItem("projects"));
+        if(!projectObjects) return [];
+
+        return projectObjects.map(po => {
+            const project = new Project(po.title, po.desc, po.due);
+            project.id = po.id;
+            project.isCompleted = po.isCompleted;
+            project.taskGroups = po.taskGroups;
+
+            return project;
+        })
+
     }
 
     static saveProjects(projects){

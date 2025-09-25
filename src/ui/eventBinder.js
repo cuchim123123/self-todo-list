@@ -1,4 +1,4 @@
-import { showProjectForm } from "../views/projectView";
+import { showProjectForm } from "./projectView";
 
 export default function initEvents(){
     const addProjectBtn = document.querySelector(".add-project");

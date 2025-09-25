@@ -1,20 +1,20 @@
 import Project from "../models/Project.js";
 import storage from "../storage.js";
-import { renderProjects } from "../views/projectView.js";
 
 
-const projects = storage.loadProjects();
-
-export function addProject(title){
-    title = title.trim().replace(/\s+/g, ' ');
-    if(projects.some(project => project.title.toLowerCase() === title.toLowerCase())){
-        alert("Project's title exists!");
-        return;
+export default class ProjectManager {
+    constructor(){
+        this.projects = storage.loadProjects();
     }
-    if(!title){
-        alert("Title can't be empty!");
-        return;
+
+    getProjects(){
+        return this.projects;
     }
-    projects.push(new Project(title));
+
+    addProject(title, desc, due){
+        const newProject = new Project(title, desc, due);
+        this.projects.push(newProject);
+    }
 }
+
 

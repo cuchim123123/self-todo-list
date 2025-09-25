@@ -1,11 +1,11 @@
 export default class Task {
-    constructor(title, due, priority = 0){
+    constructor(title, due, priority = 0, taskGroupId){
         this.id = crypto.randomUUID();
         this.isCompleted = false;
-
         this.title = title;
         this.due = due;
         this.priority = priority;
+        this.taskGroupId = taskGroupId;
     }
 
     setTitle(newTitle){
