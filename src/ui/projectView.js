@@ -1,12 +1,12 @@
-import Project from "../models/Project";
-import storage from "../LocalStorage";
+import { getProjects } from "../services/ProjectManager";
+
 
 const addProjectBtn = document.querySelector(".add-project");
 const deleteProjectBtn = document.querySelector(".project-delete-btn");
 const projectsHolder = document.querySelector(".projects");
 const projectForm = document.querySelector(".add-project-form")
 
-const projects = storage.loadProjects();
+const projects = getProjects();
 
 export function renderProjects(){
     projectsHolder.innerHTML = ``;
@@ -14,6 +14,7 @@ export function renderProjects(){
     projects.forEach((project)=>{
         const projectDiv = document.createElement("div");
         projectDiv.classList.add("project");
+        projectDiv.dataset.id = project.id;
 
         const titleSpan = document.createElement("span");
         titleSpan.textContent = project.title;
@@ -27,5 +28,9 @@ export function renderProjects(){
 
 export function showProjectForm(){
     projectForm.style.display = "grid";
+}
+
+export function hideProjectForm(){
+    projectForm.style.display = "none";
 }
 

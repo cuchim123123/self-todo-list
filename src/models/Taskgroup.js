@@ -1,6 +1,6 @@
 export default class TaskGroup {
-    constructor(title, projectId){
-        this.id = crypto.randomUUID();
+    constructor(title, projectId, id){
+        this.id = id || crypto.randomUUID();
         this.title = title;
         this.projectId = projectId;
         this.taskIds = [];  

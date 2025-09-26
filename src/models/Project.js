@@ -1,6 +1,6 @@
 export default class Project {
-    constructor(title, desc, due){
-        this.id = crypto.randomUUID();
+    constructor(title, desc, due, id){
+        this.id = id || crypto.randomUUID();
         this.title = title;
         this.due = due;
         this.desc = desc;

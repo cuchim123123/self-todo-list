@@ -1,12 +1,10 @@
-import StorageInterface from "./services/storageInterface";
-
-export default class LocalStorage extends StorageInterface{
-    load(key) {
+export default class LocalStorage {
+    static load(key) {
         const data = localStorage.getItem(key);
         return data ? JSON.parse(data) : [];
     }
 
-    save(key, data) {
+    static save(key, data) {
         localStorage.setItem(key, JSON.stringify(data));
     }
 }
