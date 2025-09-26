@@ -4,8 +4,8 @@ import { getProjects } from "../services/ProjectManager";
 const addProjectBtn = document.querySelector(".add-project");
 const deleteProjectBtn = document.querySelector(".project-delete-btn");
 const projectsHolder = document.querySelector(".projects");
-const projectForm = document.querySelector(".add-project-form")
-
+const projectForm = document.querySelector(".add-project-form");
+const addProjectInput = document.querySelector("#project-title");
 
 
 export function renderProjects(){
@@ -28,6 +28,7 @@ export function renderProjects(){
 
 export function showProjectForm(){
     projectForm.style.display = "grid";
+    addProjectInput.focus();
 }
 
 export function hideProjectForm(){
