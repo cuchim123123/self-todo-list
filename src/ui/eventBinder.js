@@ -18,9 +18,8 @@ export default function initEvents(){
     });
     cancelAddBtn.addEventListener("click", hideProjectForm);
     projectsContainer.addEventListener("click", (e) => {
-        if(e.target.matches(".project-delete-btn")){
+        if(e.target.closest (".project-delete-btn")){
             const id = e.target.closest(".project").dataset.id;
-            alert(id || "hi")
             handleDeleteProject(id);
         }
     })
