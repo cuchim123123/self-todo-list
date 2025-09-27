@@ -1,12 +1,19 @@
 import { showProjectForm, hideProjectForm } from "./projectView";
 import { handleAddProject, handleDeleteProject } from "../controllers/projectController";
+import { showTaskGroupForm } from "./taskGroupView";
 
 export default function initEvents(){
+    // Project elements
     const addProjectBtn = document.querySelector(".add-project");
     const projectForm = document.querySelector(".add-project-form")
     const cancelAddBtn = document.querySelector("#cancel-add-project-btn")
     const projectsContainer = document.querySelector(".projects")
 
+    // TaskGroup elements
+    const addTaskGroupBtn = document.querySelector("#add-taskgroup-btn");
+
+
+    // Project events
     addProjectBtn.addEventListener("click", showProjectForm);
     projectForm.addEventListener("submit", (e) => {
         const titleInput = document.querySelector("#project-title");
@@ -24,4 +31,7 @@ export default function initEvents(){
         }
     })
 
+
+    // TaskGroup events
+    addTaskGroupBtn.addEventListener("click", showTaskGroupForm);
 }

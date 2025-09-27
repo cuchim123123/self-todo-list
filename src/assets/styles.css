@@ -247,7 +247,7 @@ transform: scale(1.2);
 }
 
 .add-taskgroup-form {
-  display: grid;
+  display: none;
   justify-content: start;
 }
 
