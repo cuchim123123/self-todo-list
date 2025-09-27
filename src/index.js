@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     
     renderProjects();
+    renderTaskGroups();
     initEvents();
 
 

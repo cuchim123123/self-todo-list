@@ -220,6 +220,7 @@ background-color: var(--grey);
 
 display: grid;
 gap: 2rem;
+align-content: start;
 }
 
 .task-list .plus-svg {
@@ -243,7 +244,9 @@ transform: scale(1.2);
   gap: 0.8rem;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
-  width: 40vw;
+  width: 30rem;
+
+  align-self: start;
 }
 
 .add-taskgroup-form {

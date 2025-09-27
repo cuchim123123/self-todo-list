@@ -1,6 +1,6 @@
 import { showProjectForm, hideProjectForm } from "./projectView";
 import { handleAddProject, handleDeleteProject } from "../controllers/projectController";
-import { showTaskGroupForm } from "./taskGroupView";
+import { showTaskGroupForm, hideTaskGroupForm } from "./taskGroupView";
 import { handleAddTaskGroup } from "../controllers/taskGroupController";
 
 export default function initEvents(){
@@ -13,6 +13,7 @@ export default function initEvents(){
     // TaskGroup elements
     const addTaskGroupBtn = document.querySelector("#add-taskgroup-btn");
     const taskGroupForm = document.querySelector(".add-taskgroup-form");
+    const cancelAddTgBtn = document.querySelector("#cancel-add-taskgroup-btn");
 
     // Project events
     addProjectBtn.addEventListener("click", showProjectForm);
@@ -36,8 +37,10 @@ export default function initEvents(){
     // TaskGroup events
     addTaskGroupBtn.addEventListener("click", showTaskGroupForm);
     taskGroupForm.addEventListener("submit", e => {
-        const titleInput = document.querySelector("#taskgroup-title")
+        const titleInput = document.querySelector("#taskgroup-title");
         e.preventDefault();
-        handleAddTaskGroup();
+        handleAddTaskGroup(titleInput.value);
+        titleInput.value = "";
     })
+    cancelAddTgBtn.addEventListener("click", hideTaskGroupForm);
 }
