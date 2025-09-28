@@ -1,7 +1,7 @@
-import { showProjectForm, hideProjectForm } from "./projectView";
+import { showProjectForm, hideProjectForm } from "../views/projectView";
 import { handleAddProject, handleDeleteProject } from "../controllers/projectController";
-import { showTaskGroupForm, hideTaskGroupForm } from "./taskGroupView";
-import { showTaskForm, hideTaskForm } from "./taskView"; 
+import { showTaskGroupForm, hideTaskGroupForm } from "../views/taskGroupView";
+import { showTaskForm, hideTaskForm } from "../views/taskView"; 
 import { handleAddTaskGroup } from "../controllers/taskGroupController";
 
 export default function initEvents(){

@@ -1,16 +1,11 @@
-let currentProjectId = null;
-let currentTaskGroupId = null;
+import storage from "../LocalStorage";
+
+let currentProjectId = storage.load("lastProjectId");
 
 export function getCurrentProjectId(){
     return currentProjectId;
 }
 export function setCurrentProjectId(newId){
     currentProjectId = newId;
-}
-
-export function getCurrentTaskGroupId(){
-    return currentTaskGroupId;
-}
-export function setCurrentTaskGroupId(newId){
-    currentTaskGroupId = newId;
+    storage.save("lastProjectId", currentProjectId);
 }

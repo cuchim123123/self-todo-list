@@ -17,10 +17,14 @@ export function deleteTask(taskId){
     const target = tasks.find(t => t.id === taskId);
     tasks = tasks.filter(t => t.id !== taskId);
     getCorrespondingTaskGroup(target.taskGroupId).removeTaskId(target.id);
+
     storage.save("tasks", tasks);
+    storage.save("taskGroups", getTaskGroups());
 }
 
-
+export function getTasks(){
+    return tasks;
+}
 
 function getCorrespondingTaskGroup(taskGroupId){
     return getTaskGroups().find(tg => tg.id === taskGroupId);

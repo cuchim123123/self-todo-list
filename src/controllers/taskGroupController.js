@@ -1,8 +1,8 @@
-import { addTaskGroup } from "../services/taskGroupManager";
+import { addTaskGroup, getTaskGroups } from "../services/taskGroupManager";
 import { getCurrentProjectId } from "../state/uiState";
-import { renderTaskGroups } from "../ui/taskGroupView";
+import { renderTaskGroups } from "../views/taskGroupView";
 
 export function handleAddTaskGroup(title){
     addTaskGroup(title, getCurrentProjectId());
-    renderTaskGroups();
+    renderTaskGroups(getCurrentProjectId(), getTaskGroups());
 }
