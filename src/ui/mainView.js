@@ -1,5 +1,2 @@
 
 
-export function renderAll(){
-    
-}

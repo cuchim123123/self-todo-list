@@ -24,6 +24,14 @@ export function renderProjects(projects){
     });
 }
 
+
+
+export function highlightProject(prevId, id){
+    const prevProject = document.querySelector(`[data-id="${prevId}"]`);
+    if(prevProject) prevProject.classList.remove("selecting-project");
+    document.querySelector(`[data-id="${id}"]`).classList.add("selecting-project");
+}
+
 export function showProjectForm(){
     projectForm.style.display = "grid";
     addProjectInput.focus();

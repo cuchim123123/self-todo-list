@@ -1,6 +1,9 @@
 import { renderTasks } from "./taskView";
+import { getTasks } from "../services/TaskManager";
+
 const taskGroupsHolder = document.querySelector(".taskgroups-container");
-const taskGroupForm = document.querySelector(".add-taskgroup-form")
+const taskGroupForm = document.querySelector(".add-taskgroup-form");
+
 
 
 export function renderTaskGroups(projectId, taskGroups) {

@@ -164,6 +164,10 @@ background-color: var(--sidebar-hover);
 transition: 0.2s;
 }
 
+.selecting-project {
+  background-color: var(--sidebar-hover);
+}
+
 /* Main */
 
 /* Projects infos*/

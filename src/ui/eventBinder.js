@@ -1,8 +1,9 @@
-import { showProjectForm, hideProjectForm } from "../views/projectView";
-import { handleAddProject, handleDeleteProject } from "../controllers/projectController";
+import { showProjectForm, hideProjectForm, highlightProject } from "../views/projectView";
+import { handleAddProject, handleDeleteProject, handleSelectProject } from "../controllers/projectController";
 import { showTaskGroupForm, hideTaskGroupForm } from "../views/taskGroupView";
 import { showTaskForm, hideTaskForm } from "../views/taskView"; 
 import { handleAddTaskGroup } from "../controllers/taskGroupController";
+import { handleAddTask } from "../controllers/taskController";
 
 export default function initEvents(){
     // Project elements
@@ -34,10 +35,14 @@ export default function initEvents(){
     });
     cancelAddBtn.addEventListener("click", hideProjectForm);
     projectsContainer.addEventListener("click", e => {
+        // Delete btn
         if(e.target.closest (".project-delete-btn")){
             const id = e.target.closest(".project").dataset.id;
             handleDeleteProject(id);
         }
+
+        // Select project
+        if(e.target.matches(".project")) handleSelectProject(e.target.dataset.id);
     })
 
 

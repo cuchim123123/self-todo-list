@@ -1,7 +1,8 @@
 import { addProject, deleteProject, getProjects } from "../services/projectManager";
-import { renderProjects } from "../views/projectView";
+import { renderProjects, highlightProject } from "../views/projectView";
 import { renderTaskGroups } from "../views/taskGroupView";
 import { getCurrentProjectId, setCurrentProjectId } from "../state/uiState";
+import { getTaskGroups } from "../services/taskGroupManager";
 
 export function handleAddProject(title){
     addProject(title, "default", new Date());
@@ -14,11 +15,12 @@ export function handleDeleteProject(id){
 }
 
 export function handleSelectProject(id){
-    if(id === getCurrentProjectId){
+    if(id === getCurrentProjectId()){
         return;
     }
+    const oldId = getCurrentProjectId();
     setCurrentProjectId(id);
-    renderProjects(getProjects());
-    renderTaskGroups(getCurrentProjectId());
+    highlightProject(oldId, id);
+    renderTaskGroups(getCurrentProjectId(), getTaskGroups());
 
 }
