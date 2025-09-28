@@ -64,9 +64,13 @@ export default function initEvents(){
             showTaskForm(group);
         }
 
-        if(e.target.matches(".add-task-btn")){
+        if(e.target.matches(`.add-task-btn`)){
             e.preventDefault();
-            handleAddTask()
+            const taskGroup = e.target.closest(".tasks-group");
+            const titleInput = taskGroup.querySelector("input");
+            handleAddTask(titleInput.value, taskGroup.dataset.id, taskGroup);
         }
     });
+
+
 }

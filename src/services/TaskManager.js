@@ -2,7 +2,6 @@ import storage from "../LocalStorage"
 import Task from "../models/Task"
 import { getTaskGroups } from "./taskGroupManager";
 
-
 let tasks = storage.load("tasks").map(t => new Task(t.title, t.due, t.priority, t.taskGroupId, t.id))
 
 export function addTask(title, due, priority, taskGroupId){

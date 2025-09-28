@@ -19,11 +19,11 @@ export function renderTasks(taskGroupId, tasks, tasksHolder){
                 taskBox.classList.add("task-box");
 
                 const label = document.createElement("label");
-                label.setAttribute("for", `checkbox-${taskId}`);
+                label.setAttribute("for", `checkbox-${t.id}`);
 
                 const input = document.createElement("input");
                 input.type = "checkbox";
-                input.id = `checkbox-${taskId}`;
+                input.id = `checkbox-${t.id}`;
 
                 const taskContent = document.createElement("div");
                 taskContent.className = "task";

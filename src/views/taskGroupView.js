@@ -17,6 +17,7 @@ export function renderTaskGroups(projectId, taskGroups) {
         .forEach(tg => {
             const taskGroupDiv = document.createElement("div");
             taskGroupDiv.classList.add("tasks-group");
+            taskGroupDiv.dataset.id = tg.id;
             
             const taskGroupTitle = document.createElement("div");
             taskGroupTitle.classList.add("taskgroup-title");
