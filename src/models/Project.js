@@ -1,11 +1,11 @@
 export default class Project {
-    constructor(title, desc, due, id){
+    constructor(title, desc, due, id, taskGroupIds){
         this.id = id || crypto.randomUUID();
         this.title = title;
         this.due = due;
         this.desc = desc;
         this.isCompleted = false;
-        this.taskGroupIds = [];
+        this.taskGroupIds = taskGroupIds || [];
     }
 
     addTaskGroup(taskGroupId){

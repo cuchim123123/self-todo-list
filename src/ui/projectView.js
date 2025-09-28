@@ -1,4 +1,4 @@
-import { getProjects } from "../services/ProjectManager";
+import { getProjects } from "../services/projectManager";
 
 
 const addProjectBtn = document.querySelector(".add-project");

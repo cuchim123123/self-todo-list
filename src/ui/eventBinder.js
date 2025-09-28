@@ -1,6 +1,7 @@
 import { showProjectForm, hideProjectForm } from "./projectView";
 import { handleAddProject, handleDeleteProject } from "../controllers/projectController";
 import { showTaskGroupForm, hideTaskGroupForm } from "./taskGroupView";
+import { showTaskForm, hideTaskForm } from "./taskView"; 
 import { handleAddTaskGroup } from "../controllers/taskGroupController";
 
 export default function initEvents(){
@@ -15,6 +16,12 @@ export default function initEvents(){
     const taskGroupForm = document.querySelector(".add-taskgroup-form");
     const cancelAddTgBtn = document.querySelector("#cancel-add-taskgroup-btn");
 
+    // Task elements
+    const tasksContainer = document.querySelector(".taskgroups-container");
+    const addTaskBtn = document.querySelector(".add-task-btn");
+
+
+    // EVENTS
     // Project events
     addProjectBtn.addEventListener("click", showProjectForm);
     projectForm.addEventListener("submit", (e) => {
@@ -43,4 +50,18 @@ export default function initEvents(){
         titleInput.value = "";
     })
     cancelAddTgBtn.addEventListener("click", hideTaskGroupForm);
+
+
+    // Task events
+    tasksContainer.addEventListener("click", (e) => {
+        if (e.target.matches(".plus-svg")) {
+            const group = e.target.closest(".tasks-group");
+            showTaskForm(group);
+        }
+
+        if(e.target.matches(".add-task-btn")){
+            e.preventDefault();
+            handleAddTask()
+        }
+    });
 }

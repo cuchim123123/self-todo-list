@@ -1,7 +1,7 @@
 import TaskGroup from "../models/Taskgroup";
 import storage from "../LocalStorage";
 
-let taskGroups = storage.load("taskGroups").map(tg => new TaskGroup(tg.title, tg.projectId, tg.id));
+let taskGroups = storage.load("taskGroups").map(tg => new TaskGroup(tg.title, tg.projectId, tg.id, tg.taskIds));
 
 export function getTaskGroups() {
     return taskGroups;

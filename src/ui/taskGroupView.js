@@ -1,4 +1,4 @@
-import { getTaskGroups } from "../services/TaskGroupManager";
+import { getTaskGroups } from "../services/taskGroupManager";
 
 const taskGroupsHolder = document.querySelector(".taskgroups-container");
 const taskGroupForm = document.querySelector(".add-taskgroup-form")
@@ -22,10 +22,10 @@ export function renderTaskGroups() {
 
         const taskGroupForm = `
             <form action="" class="add-task-form">
-              <label for="task-title">
-                <input type="text" id="task-title" placeholder="Title" required="">
-                <button id="add-task-btn">Add</button>
-                <button type="button" id="cancel-add-task-btn">Cancel</button>
+              <label for="task-title-${tg.id}">
+                <input type="text" id="task-title-${tg.id}" placeholder="Title" required="">
+                <button class="add-task-btn">Add</button>
+                <button type="button" class="cancel-add-task-btn">Cancel</button>
               </label>
             </form>
         `
@@ -33,6 +33,7 @@ export function renderTaskGroups() {
         taskGroupTitle.append(h3);
         taskGroupTitle.innerHTML += plusIcon;
         taskGroupDiv.append(taskGroupTitle);
+        taskGroupDiv.innerHTML += taskGroupForm;
         taskGroupsHolder.append(taskGroupDiv);
     });
 }

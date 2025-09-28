@@ -1,4 +1,4 @@
-import { addTaskGroup } from "../services/TaskGroupManager";
+import { addTaskGroup } from "../services/taskGroupManager";
 import { getCurrentProjectId } from "../state/uiState";
 import { renderTaskGroups } from "../ui/taskGroupView";
 

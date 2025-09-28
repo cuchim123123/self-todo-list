@@ -330,7 +330,7 @@ display: grid;
 }
 
 .add-task-form {
-  display: grid;
+  display: none;
   justify-content: start;
   
 }

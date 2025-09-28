@@ -1,4 +1,4 @@
-import { addProject, deleteProject } from "../services/ProjectManager";
+import { addProject, deleteProject } from "../services/projectManager";
 import { renderProjects } from "../ui/projectView";
 
 export function handleAddProject(title){
