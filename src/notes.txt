@@ -1,0 +1,2 @@
+fix tasks style
+add placeholder for empty items
