@@ -6,15 +6,17 @@ export default class TaskGroup {
         this.taskIds = taskIds || [];  
     }
 
-    addTask(taskId){
+    addTaskId(taskId){
         this.taskIds.push(taskId);
     }
 
-    removeTask(taskId){
+    removeTaskId(taskId){
         this.taskIds = this.taskIds.filter(id => id !== taskId);
     }
 
     setTitle(newTitle){
         this.title = newTitle;
     }
+
+    
 }

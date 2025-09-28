@@ -8,11 +8,11 @@ export default class Project {
         this.taskGroupIds = taskGroupIds || [];
     }
 
-    addTaskGroup(taskGroupId){
+    addTaskGroupId(taskGroupId){
         this.taskGroupIds.push(taskGroupId);
     }
 
-    removeTaskGroup(taskGroupId){
+    removeTaskGroupId(taskGroupId){
         this.taskGroupIds = this.taskGroupIds.filter(id => id !== taskGroupId);
     }
 
