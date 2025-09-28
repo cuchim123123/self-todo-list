@@ -1,2 +1,3 @@
 fix tasks style
 add placeholder for empty items
+work on the hero panel
